@@ -32,6 +32,10 @@ backend/.coverage.*
 backend/coverage.xml
 backend/htmlcov/
 backend/.ipynb_checkpoints/
+backend/uv.lock
+
+# Database
+backend/dev.db
 
 # Build artifacts
 backend/build/
