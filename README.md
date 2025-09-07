@@ -62,6 +62,26 @@ uv run alembic revision -m "init"
 uv run alembic upgrade head
 ```
 
+### Running the system locally
+```bash
+# 1) Backend
+cd backend
+uv run uvicorn app.main:app --reload  # visit http://localhost:8000/docs
+
+
+# 2) Frontend
+cd ../frontend
+pnpm dev  # visit http://localhost:5173
+```
+
+
+### Cleaning the repository
+```bash
+git clean -fdX
+```
+It is VITAL that you have a capital X, not a lowercase X. A lowercase X will remove any untracked files.
+
+
 ### Notes
 - The **Testcontainers**-based test is marked with `@pytest.mark.docker` and **skipped by default**. Enable via `-m docker`.
 - Edit `docker-compose.yml` to add services (e.g., workers).
